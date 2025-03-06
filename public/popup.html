@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Pedido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100">
+    <!-- Container do Popup -->
+    <div class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50" id="popup">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+            <h2 class="text-2xl font-bold text-center text-pink-800">Pedido Confirmado!</h2>
+            <p class="text-center text-gray-700 mt-4">Seu pedido foi enviado com sucesso. Em breve, você receberá mais informações.</p>
+            
+            <!-- Botões de ação -->
+            <div class="flex justify-center gap-4 mt-6">
+                <button onclick="goBack()" class="bg-pink-500 text-white py-2 px-4 rounded-md">Voltar ao Início</button>
+                <button onclick="closePopup()" class="bg-pink-700 text-white py-2 px-4 rounded-md">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para fechar o popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none"; // Fecha o popup
+        }
+
+        // Função para voltar ao início (pode ser alterada para redirecionar para outra página)
+        function goBack() {
+            window.location.href = "index.html"; // Redireciona para a página inicial
+        }
+    </script>
+</body>
+</html>
